@@ -16,17 +16,17 @@ public class Maximum {
 		System.out.println("Enter 3rd float number:");
 		Float N3 = sc.nextFloat();
 		
-		maximumFloat(N1, N2, N3);
+		maximumGeneric(N1, N2, N3);
 		
 	}
 	
-	public static void maximumFloat(Float N1, Float N2, Float N3 ) {
-		Float max = N1;
+	public static <E extends Comparable<E>> void maximumGeneric(E N1, E N2, E N3 ) {
+		E max = N1;
 		if(N2.compareTo(max) > 0)
 			max = N2;
 		if(N3.compareTo(max) > 0)
 			max = N3;
-		System.out.println("Maximum Float Number: " +max);
+		System.out.println("Maximum: " +max);
 	}
 
 }
